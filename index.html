@@ -245,6 +245,7 @@
         fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${artistId}`)
           .then(response => response.json())
           .then(data => {
+          console.log(data);
             const album= document.getElementById("album" + artistName);
             album.innerHTML = "";
             data.data.forEach(item => {
